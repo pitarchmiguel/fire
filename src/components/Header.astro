@@ -2,6 +2,9 @@
 import InfoCircle from '../assets/info-circle.svg';
 import InfoRight from '../assets/circle-arrow-right.svg';
 import Close from '../assets/close.svg';
+import Phone from '../assets/phone.svg';
+import Map from '../assets/map.svg';
+import Schedule from '../assets/schedule.svg';
 ---
 
 <div class="relative w-full h-full">
@@ -26,14 +29,33 @@ import Close from '../assets/close.svg';
     </div>
 
 <!-- Popup information -->
-    <div id="popup" class="h-[80%] w-full bg-amber-100 absolute left-0 -bottom-full rounded-3xl transition-all duration-400 ease-in-out">
-        <button id="cerrar-popup" class="curser-pointer absolute top-0 right-0 p-4">
+    <div id="popup" class="h-[80%] w-full bg-slate-100 absolute left-0 -bottom-full rounded-3xl transition-all duration-400 ease-in-out overflow-hidden">
+        <button id="cerrar-popup" class="cursor-pointer absolute top-0 right-0 p-4">
             <Close width={34} height={34} />
         </button>
 
+        
         <div>
-            
+            <img src="https://firestation.netlify.app/images/mapa.png" alt="">
+            <div class="p-6">
+                <h1 class="uppercase text-3xl font-extrabold tracking-tighter">firestation</h1>
+                <adress class="flex flex-col gap-3 mt-6">
+                    <div class="flex items-center gap-4">
+                        <Map /> <p>C/ Amelia Ferrer Armengot 12<br>12004 Castellón de la Plana</p>
+                    </div>
+
+                    <div class="flex items-center gap-4">
+                        <Phone /> <a href="tel:+34690040694">690 040 694</a>
+                    </div>
+
+                    <div class="flex items-center gap-4">
+                        <Schedule /> <p>Lu - Vi; 7:00 - 17:00<br>Sab: 8:00 - 13:00</p>
+                    </div>
+                    
+                </adress>
+            </div>
         </div>
+        
     </div>
 </div>
 </div>
