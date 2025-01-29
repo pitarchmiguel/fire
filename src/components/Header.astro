@@ -29,17 +29,17 @@ import Schedule from '../assets/schedule.svg';
     </div>
 
 <!-- Popup information -->
-    <div id="popup" class="h-[80%] w-full bg-slate-100 absolute left-0 -bottom-full rounded-3xl transition-all duration-400 ease-in-out overflow-hidden">
+    <div id="popup" class="popup h-[80%] w-full bg-slate-100 absolute left-0 rounded-3xl transition-all duration-400 ease-in-out overflow-hidden">
         <button id="cerrar-popup" class="cursor-pointer absolute top-0 right-0 p-4">
             <Close width={34} height={34} />
         </button>
 
         
         <div>
-            <img src="https://firestation.netlify.app/images/mapa.png" alt="">
+            <img src="https://firestation.netlify.app/images/mapa.png" alt="Mapa">
             <div class="p-6">
                 <h1 class="uppercase text-3xl font-extrabold tracking-tighter">firestation</h1>
-                <adress class="flex flex-col gap-3 mt-6">
+                <address class="flex flex-col gap-3 mt-6">
                     <div class="flex items-center gap-4">
                         <Map /> <p>C/ Amelia Ferrer Armengot 12<br>12004 Castellón de la Plana</p>
                     </div>
@@ -59,3 +59,9 @@ import Schedule from '../assets/schedule.svg';
     </div>
 </div>
 </div>
+
+<style>
+    .popup {
+        bottom: 0;
+    }
+</style>
