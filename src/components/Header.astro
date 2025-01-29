@@ -1,0 +1,58 @@
+---
+import InfoCircle from '../assets/info-circle.svg';
+import InfoRight from '../assets/circle-arrow-right.svg';
+import Close from '../assets/close.svg';
+---
+
+<div class="relative w-full h-full">
+    <!-- Background image -->
+<div class="w-full h-[250px] bg-amber-100">
+    <img src="https://go.nordqr.com/89p92c/ff00b67072u.webp" alt="FireStation" class="w-full h-full object-fill" />
+</div>
+
+<!-- Title and information -->
+<div class="p-6 mt-2">
+    <h1 class="uppercase text-3xl font-extrabold tracking-tighter">firestation</h1>
+
+    <div class="flex justify-between items-center mt-4">
+        <div class="flex items-center gap-4">
+            <InfoCircle width={32} height={32} />
+            <div>
+                <p class="font-semibold ">Información</p>
+                <span class="text-sm ">Dirección, horario, teléfono</span>
+            </div>
+        </div>
+        <button id="info" class="cursor-pointer block"><InfoRight width={32} height={32} /></button>
+    </div>
+
+<!-- Popup information -->
+    <div id="popup" class="h-[80%] w-full bg-amber-100 absolute left-0 -bottom-full rounded-3xl transition-all duration-400 ease-in-out">
+        <button id="cerrar-popup" class="curser-pointer absolute top-0 right-0 p-4">
+            <Close width={34} height={34} />
+        </button>
+
+        <div>
+            
+        </div>
+    </div>
+</div>
+</div>
+
+<script>
+    const button = document.querySelector('#info');
+    const cerrar = document.querySelector('#cerrar-popup');
+
+    if (button) {
+        button.addEventListener('click', () => {
+            const popup = document.querySelector('#popup');
+            popup?.classList.toggle('bottom-0');
+        });
+    }
+
+    if (cerrar) {
+        cerrar.addEventListener('click', () => {
+            const popup = document.querySelector('#popup');
+            popup?.classList.toggle('bottom-0');
+        });
+    }
+</script>
