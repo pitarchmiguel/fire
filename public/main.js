@@ -5,7 +5,7 @@ const cerrar = document.querySelector('#cerrar-popup');
     button.addEventListener('click', () => {
         console.log('click');
         const popup = document.querySelector('#popup');
-        popup.classList.toggle('bottom-0');
+        popup.classList.add('bottom-0');
     });
 
     cerrar.addEventListener('click', () => {
